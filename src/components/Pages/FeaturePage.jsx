@@ -8,7 +8,7 @@ export default function FeaturePage() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full bg-blue-900 text-white p-6 sm:p-16 flex flex-col md:flex-row items-center justify-between shadow-xl"
+        className="w-full bg-blue-600 text-white p-6 sm:p-16 flex flex-col md:flex-row items-center justify-between shadow-xl"
       >
         <motion.div 
           initial={{ opacity: 0, x: -50 }} 

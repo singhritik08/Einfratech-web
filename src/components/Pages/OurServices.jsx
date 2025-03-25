@@ -85,7 +85,7 @@ export default function OurServices() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.2 }}
             >
-              <div className="text-5xl text-green-500 mb-4">{step.icon}</div>
+              <div className="text-5xl text-blue-500 mb-4">{step.icon}</div>
               <h4 className="text-sm font-semibold text-gray-500">{step.step}</h4>
               <h3 className="text-lg font-bold">{step.title}</h3>
               <p className="text-sm mt-2">{step.description}</p>

@@ -3,7 +3,7 @@ import React from "react";
 // Counter Component
 const Counter = () => {
   return (
-    <div className="flex justify-around w-full bg-gray-800 py-8">
+    <div className="flex justify-around w-full bg-blue-600 py-8">
       {[
         { number: "500+", label: "Projects Completed" },
         { number: "300+", label: "Happy Clients" },

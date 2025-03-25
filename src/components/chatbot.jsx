@@ -238,6 +238,7 @@ const Chatbot = () => {
           <div className="chatbot-header">
             <div style={{ flex: 1 }}></div>
             <span style={{ flex: 1, textAlign: 'center' }}>INFRA</span>
+            <style>=background: linear-gradient(90deg, #2563EB);</style>
             <button 
               className="close-button"
               style={{ flex: 1, justifyContent: 'flex-end' }}

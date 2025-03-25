@@ -101,7 +101,7 @@ const LifeScience = () => {
               </motion.ul>
 
               <motion.button
-                className="bg-[#0D6EFD] text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-[#0b5ed7] transition-colors"
+                className="bg-[#2563EB] text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-[#0b5ed7] transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
@@ -119,17 +119,10 @@ const LifeScience = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <div className="relative w-full flex justify-center px-4 sm:px-0">
-                <img
+              <img
                   src="https://github.com/RKRahul1250/finaleinfratech/blob/master/Einfratech-web-main/src/assets/life1.jpg?raw=true"
                   alt="Life Sciences"
-                  className="w-full sm:w-[350px] md:w-[450px] lg:w-full h-auto rounded-2xl max-w-[900px]"
-                  style={{
-                    objectFit: 'cover',
-                    width: '100%',
-                    '@media (min-width: 640px)': {
-                      width: 'auto'
-                    }
-                  }}
+                  className="w-full sm:w-[600px] md:w-[650px] lg:w-full h-[400px] sm:h-[450px] md:h-[500px] rounded-2xl max-w-[1200px] object-cover"
                 />
                 <div className="absolute -top-4 -right-4 w-24 sm:w-32 h-24 sm:h-32 bg-[#E6F7FF] rounded-full -z-10"></div>
                 <div className="absolute -bottom-4 -left-4 w-20 sm:w-24 h-20 sm:h-24 bg-[#FFF4E6] rounded-full -z-10"></div>
@@ -138,16 +131,16 @@ const LifeScience = () => {
             </motion.div>
           </div>
         </div>
-        </section>
+      </section>
 
-
-  <div className="container mx-auto px-4 max-w-6xl">
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="text-center mb-16"
-    >
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-center mb-20"
+          >
             <motion.div
               className="inline-block mb-2"
               initial={{ scale: 0.5, opacity: 0 }}
@@ -251,8 +244,8 @@ const LifeScience = () => {
             ))}
           </div>
         </div>
-     
-      <section className="bg-gradient-to-b from-[#003366] to-[#006699] py-24 overflow-hidden relative">
+      </section>
+      <section className="bg-[#2563EB] py-24 overflow-hidden relative">
         <motion.div 
           className="absolute inset-0 opacity-10"
           initial={{ backgroundPosition: '0% 0%' }}
@@ -262,39 +255,13 @@ const LifeScience = () => {
             backgroundImage: 'url("data:image/svg+xml,...)'
           }}
         />
-        <motion.div
-  className="absolute inset-0"
-  initial={{ 
-    backgroundPosition: '0% 0%',
-    opacity: 0 
-  }}
-  animate={{ 
-    backgroundPosition: '100% 100%',
-    opacity: 0.1
-  }}
-  transition={{ 
-    backgroundPosition: {
-      duration: 30,
-      repeat: Infinity,
-      repeatType: "reverse",
-      ease: "linear"
-    },
-    opacity: {
-      duration: 0.5,
-      ease: "easeOut"
-    }
-  }}
-  style={{
-    backgroundImage: 'url("data:image/svg+xml,...)',
-    willChange: 'background-position, opacity'
-  }}
-/>
 
         <div className="container mx-auto px-4 md:px-12 flex flex-col md:flex-row items-center gap-16 relative z-10">
           <motion.div 
             className="md:w-1/2 relative"
             initial={{ x: "100%", opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false }}
             transition={{ 
               type: "spring",
               stiffness: 50,
@@ -302,27 +269,18 @@ const LifeScience = () => {
               mass: 1,
               duration: 1.2
             }}
-            viewport={{ once: true, amount: 0.3 }}
           >
             <motion.div 
               className="relative rounded-lg overflow-hidden"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5 }}
             >
-              {/* Reveal overlay */}
-              <motion.div
-                className="absolute inset-0 bg-[#003366] z-20"
-                initial={{ scaleX: 1 }}
-                whileInView={{ scaleX: 0 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                style={{ transformOrigin: "right" }}
-              />
-              
               <motion.img
                 src="https://github.com/RKRahul1250/finaleinfratech/blob/master/Einfratech-web-main/src/assets/life4.jpg?raw=true"
                 alt="GMP Facilities"
                 className="w-full h-auto object-cover rounded-lg shadow-xl"
                 style={{ maxWidth: '550px' }}
+                loading="eager"
                 whileHover={{ filter: 'brightness(1.1)' }}
                 transition={{ duration: 0.5 }}
               />
@@ -330,12 +288,14 @@ const LifeScience = () => {
                 className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-blue-200/40 to-blue-400/40 rounded-full -z-10 backdrop-blur-sm"
                 initial={{ scale: 0, rotate: -180 }}
                 whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: false }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
               />
               <motion.div 
                 className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-tr from-yellow-200/40 to-orange-300/40 rounded-full -z-10 backdrop-blur-sm"
                 initial={{ scale: 0, rotate: 180 }}
                 whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: false }}
                 transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
               />
             </motion.div>
@@ -345,13 +305,14 @@ const LifeScience = () => {
             className="md:w-1/2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
             transition={{ duration: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
           >
             <motion.h2 
               className="text-4xl md:text-[42px] font-bold text-white mb-6 leading-tight relative"
               initial={{ clipPath: "inset(0 100% 0 0)" }}
               whileInView={{ clipPath: "inset(0 0% 0 0)" }}
+              viewport={{ once: false }}
               transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
             >
               How GMP Facilities Use Connected Workplace for Life Sciences
@@ -359,6 +320,7 @@ const LifeScience = () => {
                 className="absolute -z-10 w-full h-2 bg-white/10 bottom-0 left-0"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
+                viewport={{ once: false }}
                 transition={{ duration: 1, delay: 1.5 }}
               />
             </motion.h2>
@@ -367,16 +329,17 @@ const LifeScience = () => {
               className="text-white/90 text-lg mb-8 leading-relaxed"
               initial={{ clipPath: "inset(0 100% 0 0)" }}
               whileInView={{ clipPath: "inset(0 0% 0 0)" }}
+              viewport={{ once: false }}
               transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
             >
               Learn how we helped our customer transform their facilities and asset management processes.
             </motion.p>
       
             <motion.button
-              className="group bg-white text-[#003366] px-8 py-3 rounded-lg font-semibold 
-                       relative overflow-hidden transition-all duration-300"
+              className="group bg-white text-[#003366] px-8 py-3 rounded-lg font-semibold relative overflow-hidden transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
               transition={{ duration: 0.8, delay: 1.2 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -394,6 +357,7 @@ const LifeScience = () => {
           </motion.div>
         </div>
       </section>
+
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div

@@ -96,7 +96,7 @@ export default function Footer() {
             placeholder="Email"
             className="w-full p-2 mt-2 bg-gray-800 text-white border border-gray-700 rounded-md text-sm"
           />
-          <button className="w-full mt-2 bg-indigo-600 hover:bg-indigo-700 text-white py-1 rounded-md text-sm">
+          <button className="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white py-1 rounded-md text-sm">
             Subscribe
           </button>
         </div>

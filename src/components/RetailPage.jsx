@@ -48,7 +48,7 @@ const FeatureList = ({ items, iconSrc, iconAlt, textColor = "text-gray-600" }) =
               <img src={iconSrc} alt={iconAlt} className="h-5 w-5 mr-3 bg-transparent" loading="lazy" />
             </motion.div>
           ) : (
-            <span className="h-5 w-5 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mr-3">✔</span>
+            <span className="h-5 w-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3"></span>
           )}
           <span className="font-semibold">{item}</span>
         </motion.li>
@@ -67,7 +67,7 @@ const HeroSection = () => {
       className="relative py-12 px-6 md:px-12 lg:px-20 mx-4 md:mx-10 flex flex-col md:flex-row items-center justify-between overflow-hidden"
     >
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-indigo-100/10 via-transparent to-teal-100/10 opacity-30"
+        className="absolute inset-0 bg-gradient-to-br from-blue-100/10 via-transparent to-teal-100/10 opacity-30"
         initial={{ x: "-100%" }}
         animate={{ x: "100%" }}
         transition={{ duration: 10, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
@@ -79,7 +79,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.p
-          className="text-indigo-500 text-sm font-semibold tracking-wider"
+          className="text-blue-500 text-sm font-semibold tracking-wider"
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -92,7 +92,7 @@ const HeroSection = () => {
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 120 }}
         >
-          Keep Your <br /> Customers <span className="text-indigo-600">Coming Back</span>
+          Keep Your <br /> Customers <span className="text-blue-600">Coming Back</span>
         </motion.h1>
         <p className="text-gray-700 text-base md:text-lg font-medium max-w-md">
           Deliver exceptional customer experiences with streamlined store operations. Empower your teams with a solution that manages the full lifecycle of your retail locations:
@@ -108,7 +108,7 @@ const HeroSection = () => {
         />
         <motion.button
           type="button"
-          className="mt-8 bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-md"
+          className="mt-8 bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
@@ -156,7 +156,7 @@ const FacilitiesSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h4 className="text-2xl font-semibold text-indigo-600">Facilities Made Simple</h4>
+          <h4 className="text-2xl font-semibold text-blue-600">Facilities Made Simple</h4>
           <p className="text-gray-600 text-base">Effortless maintenance for happy customers.</p>
           <FeatureList
             items={["Manage teams and vendors with ease.", "Resolve issues quickly.", "Schedule upkeep seamlessly."]}
@@ -170,7 +170,7 @@ const FacilitiesSection = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         >
           <img
-            src={operator}
+            src={"https://media.istockphoto.com/id/1366731738/photo/shopping-a-new-digital-device-happy-couple-buying-a-smartphone-in-store.jpg?s=612x612&w=0&k=20&c=QCNGucAdNwLTz9YkRFuCSnturfRsUfk_nKwjtlQg6B4="}
             alt="Operator managing retail facilities"
             className="w-full max-w-md rounded-lg shadow-md object-cover"
             loading="lazy"
@@ -188,7 +188,7 @@ const LeaseSection = () => {
   return (
     <div
       ref={ref}
-      className="bg-white rounded-xl shadow-md flex flex-col md:flex-row items-center border-t-4 border-indigo-500"
+      className="bg-white rounded-xl shadow-md flex flex-col md:flex-row items-center border-t-4 border-blue-500"
     >
       <motion.div
         className="md:w-3/5 w-full p-6 md:p-8 space-y-4"
@@ -204,7 +204,7 @@ const LeaseSection = () => {
         />
         <motion.button
           type="button"
-          className="mt-4 bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300"
+          className="mt-4 bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300"
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
@@ -309,12 +309,12 @@ const RetailPage = () => {
         </motion.div>
       </section>
 
-      <section className="relative py-16 px-6 md:px-12 bg-gradient-to-br from-indigo-600 to-teal-500 text-white overflow-hidden">
+      <section className="relative py-16 px-6 md:px-12 bg-gradient-to-br bg-blue-600 text-white overflow-hidden">
         <div className="absolute inset-0 bg-opacity-10 bg-black pointer-events-none" />
         <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2 w-full">
             <img
-              src={storage}
+              src={"https://thesocialmediamonthly.com/wp-content/uploads/2022/12/retailsuccess.jpeg"}
               alt="Warehouse operations success story"
               className="rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 w-full h-auto max-h-[400px] object-cover"
               loading="lazy"
@@ -327,7 +327,7 @@ const RetailPage = () => {
             </p>
             <button
               type="button"
-              className="mt-6 bg-white text-indigo-600 px-6 py-2 rounded-full font-semibold hover:bg-indigo-100 transition-all duration-300 shadow-md"
+              className="mt-6 bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition-all duration-300 shadow-md"
             >
               Learn More
             </button>
@@ -354,7 +354,7 @@ const RetailPage = () => {
             />
             <button
               type="button"
-              className="mt-4 bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+              className="mt-4 bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
             >
               Explore Dispatch Tools
             </button>
@@ -398,7 +398,7 @@ const RetailPage = () => {
             </p>
             <button
               type="button"
-              className="bg-cyan-400 text-white px-6 py-2 rounded-full font-semibold hover:bg-cyan-500 transition-all duration-300 shadow-md hover:shadow-lg"
+              className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
             >
               Schedule a Demo
             </button>

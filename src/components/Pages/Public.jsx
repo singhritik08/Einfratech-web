@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion"; // Add this import
 import "animate.css";
 
 const services = [
@@ -33,7 +33,7 @@ function Public() {
   return (
     <>
       <motion.div 
-        className="flex flex-col md:flex-row items-center justify-center  p-6 md:p-12"
+        className="flex flex-col md:flex-row items-center justify-center bg-white-50 p-6 md:p-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -78,7 +78,7 @@ function Public() {
             Drive digital transformation throughout your organization by consolidating separate systems across:
           </p>
           <div className="mt-6 space-y-3">
-            {["Maintenance & Asset Management", "Physical Space Allocation", "Construction Projects", "Real Estate Planning"].map(
+            {["Maintenance & Asset Management", "Physical Space Allocation", "Construction Projects", "Real Estate Planning", "Infrastructure Development"].map(
               (item, idx) => (
                 <div
                   key={idx}
@@ -87,7 +87,7 @@ function Public() {
                 >
                   <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold transition duration-300 hover:bg-blue-600 animate__animated animate__bounceIn"
                     style={{ animationDelay: `${idx * 0.3}s` }}>
-                    ✔
+                    
                   </span>
                   <span className="ml-3 font-semibold">{item}</span>
                 </div>
@@ -98,7 +98,7 @@ function Public() {
       </motion.div>
 
       <motion.div 
-        className="flex flex-col md:flex-row items-center justify-center bg-blue-50 p-6 md:p-12"
+        className="flex flex-col md:flex-row items-center justify-center bg-white-50 p-6 md:p-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -137,7 +137,7 @@ function Public() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {["Streamlined sales analysis", "Enhanced sales performance tracking", "Improved decision making"].map((item, idx) => (
+            {["Streamlined sales analysis", "Enhanced sales performance tracking", "Improved decision making", "Budgeting & Cost Control", "Risk & Compliance Management"].map((item, idx) => (
               <motion.div
                 key={idx}
                 className="flex items-center text-gray-800"
@@ -181,7 +181,7 @@ function Public() {
         </motion.div>
       </motion.div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center bg-blue-50 p-6 md:p-12 animate__animated animate__fadeIn">
+      <div className="flex flex-col md:flex-row items-center justify-center bg-white-50 p-6 md:p-12 animate__animated animate__fadeIn">
         {/* Image Section */}
         <div className="md:w-1/2 w-full flex justify-center mt-6 md:mt-0 transform transition duration-500 hover:scale-105">
           <img
@@ -249,7 +249,7 @@ function Public() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {["Ensure Complete Connectivity", "Enable Agencies & Mission Partners", "Access Data Anytime"].map((item, idx) => (
+            {["Ensure Complete Connectivity", "Enable Agencies & Mission Partners", "Access Data Anytime", "Space Optimization", "Energy & Sustainability Management"].map((item, idx) => (
               <motion.div
                 key={idx}
                 className="flex items-center text-gray-800"

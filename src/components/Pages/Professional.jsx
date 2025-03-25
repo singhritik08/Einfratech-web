@@ -5,10 +5,10 @@ export default function Professional() {
   return (
     <div className="font-sans">
       {/* Hero Section */}
-      <header className="bg-blue-900 text-white text-center py-16">
+      <header className="bg-blue-600 text-white text-center py-16">
         <h1 className="text-4xl font-bold mb-2">Professional Services for a Modern Workforce</h1>
         <p className="text-gray-300 mb-8">Transforming your business with smart, scalable solutions</p>
-        <button className="bg-white text-blue-900 px-6 py-3 rounded hover:bg-gray-100 transition duration-300">
+        <button className="bg-white text-blue-600 px-6 py-3 rounded hover:bg-gray-100 transition duration-300">
           Discover Our Services
         </button>
       </header>
@@ -216,7 +216,7 @@ export default function Professional() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 mb-4 bg-blue-900 text-white text-center">
+      <section className="py-16 mb-4 bg-blue-600 text-white text-center">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4 text-white">Get in Touch</h2>
           <p className="mb-8">

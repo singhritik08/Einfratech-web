@@ -104,7 +104,7 @@ const Dashboard = () => {
         </div>
       </motion.section>
 
-      <div className="bg-[#0C439A] h-[10vh] sm:h-[15vh] w-full"></div>
+      <div className="bg-blue-600 h-[10vh] sm:h-[15vh] w-full"></div>
 
       {/* Features Section */}
       <motion.section
@@ -178,12 +178,12 @@ const Dashboard = () => {
             We're a company built on a clear set of values. Our goal is to empower you to do your best work in the most efficient way possible.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-gray-700 text-sm md:text-base">
-            <p>✔ Connected Workplace</p>
-            <p>✔ Health Care</p>
-            <p>✔ Retail Industry</p>
-            <p>✔ Public Sector</p>
-            <p>✔ Education Sector</p>
-            <p>✔ Life Sciences</p>
+            <p>Connected Workplace</p>
+            <p>Health Care</p>
+            <p>Retail Industry</p>
+            <p>Public Sector</p>
+            <p>Education Sector</p>
+            <p>Life Sciences</p>
           </div>
         </div>
       </motion.section>
@@ -194,7 +194,7 @@ const Dashboard = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
         variants={fadeInUp}
-        className="bg-[#0C439A] text-white py-2 px-4 sm:px-6 md:px-20 flex flex-wrap justify-center gap-6 text-center overflow-hidden"
+        className="bg-blue-600 text-white py-2 px-4 sm:px-6 md:px-20 flex flex-wrap justify-center gap-6 text-center overflow-hidden"
       >
         {[
           { value: "35+", label: "Business Year" },

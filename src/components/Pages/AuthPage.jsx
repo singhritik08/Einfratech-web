@@ -14,34 +14,34 @@ export default function AuthPage() {
           <input
             type="email"
             placeholder="Email"
-            className="w-full p-3 sm:p-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base sm:text-base text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-gray-300"
+            className="w-full p-3 sm:p-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base sm:text-base text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-gray-300"
             required
           />
           {isSignUp && (
             <input
               type="password"
               placeholder="Create Password"
-              className="w-full p-3 sm:p-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base sm:text-base text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-gray-300"
+              className="w-full p-3 sm:p-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base sm:text-base text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-gray-300"
               required
             />
           )}
           <input
             type="password"
             placeholder="Password"
-            className="w-full p-3 sm:p-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base sm:text-base text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-gray-300"
+            className="w-full p-3 sm:p-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base sm:text-base text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-gray-300"
             required
           />
           {!isSignUp && (
             <a
               href="#"
-              className="text-indigo-600 text-sm sm:text-sm float-right hover:underline transition duration-200 font-medium"
+              className="text-blue-500 text-sm sm:text-sm float-right hover:underline transition duration-200 font-medium"
             >
               Forgot Password?
             </a>
           )}
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-3 sm:py-3 rounded-xl hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 text-base sm:text-base font-semibold shadow-lg hover:shadow-xl"
+            className="w-full bg-blue-600 text-white py-3 sm:py-3 rounded-xl hover:bg-blue-700 transition-all duration-300 text-base sm:text-base font-semibold shadow-lg hover:shadow-xl"
           >
             {isSignUp ? "Sign Up" : "Login"}
           </button>
@@ -50,7 +50,7 @@ export default function AuthPage() {
           {isSignUp ? "Already have an account? " : "Don't have an account? "}
           <button
             onClick={() => setIsSignUp(!isSignUp)}
-            className="text-indigo-600 hover:underline font-semibold transition duration-200"
+            className="text-blue-500 hover:underline font-semibold transition duration-200"
           >
             {isSignUp ? "Login" : "Sign Up"}
           </button>
@@ -63,7 +63,7 @@ export default function AuthPage() {
           <div className="w-10 sm:w-12 h-px bg-gray-300"></div>
         </div>
         <div className="space-y-3 sm:space-y-3 mt-2 md:mt-4 sm:mt-6">
-          <button className="w-full flex items-center justify-center bg-gradient-to-r from-blue-700 to-blue-800 text-white py-3 sm:py-3 rounded-xl hover:from-blue-800 hover:to-blue-900 transition-all duration-300 text-base sm:text-base font-semibold shadow-md hover:shadow-lg">
+          <button className="w-full flex items-center justify-center bg-blue-600  text-white py-3 sm:py-3 rounded-xl hover:bg-blue-700 transition-all duration-300 text-base sm:text-base font-semibold shadow-md hover:shadow-lg">
             <FaFacebook className="mr-2 sm:mr-2 text-xl sm:text-xl" /> Login with
             Facebook
           </button>
