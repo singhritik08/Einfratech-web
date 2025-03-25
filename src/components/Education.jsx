@@ -42,8 +42,8 @@ const Education = () => {
 
   return (
     <>
-           <section className="bg-white py-12 overflow-hidden border-l-8 border-[#fffff]">
-  <div className="container mx-auto px-4 sm:px-15 sm:pl-16">
+           <section className="bg-white py-12 overflow-hidden">
+  <div className="container mx-auto px-4 max-w-6xl">
     <div className="flex flex-col lg:flex-row items-center justify-between">
       {/* Image Section - First on mobile, right on desktop */}
       <motion.div 
@@ -143,13 +143,13 @@ const Education = () => {
   </div>
 </section>
 
-      <section className="py-24 bg-white overflow-hidden">
+      
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
             <motion.div
               className="inline-block mb-2"
@@ -254,7 +254,7 @@ const Education = () => {
             ))}
           </div>
         </div>
-      </section>
+    
       <section className="bg-gradient-to-b from-[#003366] to-[#006699] py-24 overflow-hidden relative">
         <motion.div 
           className="absolute inset-0 opacity-10"

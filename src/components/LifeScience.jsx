@@ -138,16 +138,16 @@ const LifeScience = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+        </section>
 
-      <section className="py-24 bg-white overflow-hidden">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="text-center mb-20"
-          >
+
+  <div className="container mx-auto px-4 max-w-6xl">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="text-center mb-16"
+    >
             <motion.div
               className="inline-block mb-2"
               initial={{ scale: 0.5, opacity: 0 }}
@@ -251,7 +251,7 @@ const LifeScience = () => {
             ))}
           </div>
         </div>
-      </section>
+     
       <section className="bg-gradient-to-b from-[#003366] to-[#006699] py-24 overflow-hidden relative">
         <motion.div 
           className="absolute inset-0 opacity-10"
@@ -262,6 +262,33 @@ const LifeScience = () => {
             backgroundImage: 'url("data:image/svg+xml,...)'
           }}
         />
+        <motion.div
+  className="absolute inset-0"
+  initial={{ 
+    backgroundPosition: '0% 0%',
+    opacity: 0 
+  }}
+  animate={{ 
+    backgroundPosition: '100% 100%',
+    opacity: 0.1
+  }}
+  transition={{ 
+    backgroundPosition: {
+      duration: 30,
+      repeat: Infinity,
+      repeatType: "reverse",
+      ease: "linear"
+    },
+    opacity: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }}
+  style={{
+    backgroundImage: 'url("data:image/svg+xml,...)',
+    willChange: 'background-position, opacity'
+  }}
+/>
 
         <div className="container mx-auto px-4 md:px-12 flex flex-col md:flex-row items-center gap-16 relative z-10">
           <motion.div 
@@ -282,6 +309,15 @@ const LifeScience = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5 }}
             >
+              {/* Reveal overlay */}
+              <motion.div
+                className="absolute inset-0 bg-[#003366] z-20"
+                initial={{ scaleX: 1 }}
+                whileInView={{ scaleX: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                style={{ transformOrigin: "right" }}
+              />
+              
               <motion.img
                 src="https://github.com/RKRahul1250/finaleinfratech/blob/master/Einfratech-web-main/src/assets/life4.jpg?raw=true"
                 alt="GMP Facilities"
