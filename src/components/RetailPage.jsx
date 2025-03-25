@@ -379,7 +379,7 @@ const RetailPage = () => {
 
       <section className="relative py-16 px-6 md:px-12 bg-gradient-to-br from-gray-100 to-gray-200 text-gray-900 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-1/2 border-t-2 border-blue-400 border-opacity-50 wave-top" />
+          <div className="absolute top-0 left-0 w-full h-1/2 wave-top" />
           <div className="absolute bottom-0 right-0 w-full h-1/2 border-b-2 border-yellow-400 border-opacity-50 wave-bottom" />
         </div>
         <div className="relative max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
