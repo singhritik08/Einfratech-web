@@ -33,7 +33,7 @@ function Public() {
   return (
     <>
       <motion.div 
-        className="flex flex-col md:flex-row items-center justify-center bg-blue-50 p-6 md:p-12"
+        className="flex flex-col md:flex-row items-center justify-center  p-6 md:p-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

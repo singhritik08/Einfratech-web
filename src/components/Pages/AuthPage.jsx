@@ -6,7 +6,7 @@ export default function AuthPage() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 py-0">
-      <div className="bg-white p-6 sm:p-6 md:p-8 shadow-2xl rounded-3xl w-full max-w-lg sm:max-w-md mx-4 border border-gray-100 transition-all duration-500 mt-3 sm:mt-3 hover:shadow-3xl">
+      <div className="bg-white p-6 sm:p-6 md:p-8 shadow-2xl rounded-3xl w-full max-w-lg sm:max-w-md mx-4 border border-gray-100 transition-all duration-500 mt-3 md:mt-1 hover:shadow-3xl">
         <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-center mb-4 sm:mb-6 text-gray-900 tracking-tight">
           {isSignUp ? "Sign Up" : "Sign In"}
         </h2>
@@ -46,7 +46,7 @@ export default function AuthPage() {
             {isSignUp ? "Sign Up" : "Login"}
           </button>
         </form>
-        <p className="text-center text-gray-600 text-sm sm:text-sm mt-2 sm:mt-6">
+        <p className="text-center text-gray-600 text-sm sm:text-sm mt-2 md:mt-4 sm:mt-6">
           {isSignUp ? "Already have an account? " : "Don't have an account? "}
           <button
             onClick={() => setIsSignUp(!isSignUp)}
@@ -55,14 +55,14 @@ export default function AuthPage() {
             {isSignUp ? "Login" : "Sign Up"}
           </button>
         </p>
-        <div className="flex items-center justify-center mt-2 sm:mt-6">
+        <div className="flex items-center justify-center mt-2 md:mt-4 sm:mt-6">
           <div className="w-10 sm:w-12 h-px bg-gray-300"></div>
           <span className="mx-3 sm:mx-4 text-gray-500 text-sm sm:text-sm font-medium">
             Or
           </span>
           <div className="w-10 sm:w-12 h-px bg-gray-300"></div>
         </div>
-        <div className="space-y-3 sm:space-y-3 mt-2 sm:mt-6">
+        <div className="space-y-3 sm:space-y-3 mt-2 md:mt-4 sm:mt-6">
           <button className="w-full flex items-center justify-center bg-gradient-to-r from-blue-700 to-blue-800 text-white py-3 sm:py-3 rounded-xl hover:from-blue-800 hover:to-blue-900 transition-all duration-300 text-base sm:text-base font-semibold shadow-md hover:shadow-lg">
             <FaFacebook className="mr-2 sm:mr-2 text-xl sm:text-xl" /> Login with
             Facebook

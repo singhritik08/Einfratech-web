@@ -216,9 +216,9 @@ export default function Professional() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gray-900 text-white text-center">
+      <section className="py-16 mb-4 bg-blue-900 text-white text-center">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">Get in Touch</h2>
           <p className="mb-8">
             We'd love to discuss how we can assist you in achieving your business goals. Contact us to schedule a consultation.
           </p>

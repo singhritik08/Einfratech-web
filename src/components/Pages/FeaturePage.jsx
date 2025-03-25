@@ -16,7 +16,7 @@ export default function FeaturePage() {
           transition={{ duration: 1 }} 
           className="md:w-1/2"
         >
-          <h2 className="text-3xl sm:text-5xl font-extrabold leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold leading-tight text-white">
             Elevate Your Business with <span className="text-yellow-400">Smart Solutions</span>
           </h2>
           <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed">
@@ -44,7 +44,7 @@ export default function FeaturePage() {
           className="md:w-1/2 flex justify-center mt-8 md:mt-0"
         >
           <img 
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6R7Dsfapn66o3Fj7s6SahldDW_Hptzjk7iGUApvHUPnrNndgQ2Ft3gGFRFegP2F1KN_o&usqp=CAU" 
+            src="https://www.hellotars.com/blog/wp-content/uploads/2023/05/33468239_8002021.jpg" 
             alt="AI Solutions" 
             className="rounded-xl shadow-2xl w-full sm:w-3/4 max-w-md hover:scale-105 transition-transform duration-300"
           />
@@ -56,7 +56,7 @@ export default function FeaturePage() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="p-6 sm:p-16 grid md:grid-cols-2 gap-8 sm:gap-16 mt-8 sm:mt-16"
+        className="p-6 sm:p-16 grid md:grid-cols-2 gap-8 sm:gap-16 mt-8 sm:mt-16 md:mt-4"
       >
         <motion.div 
           initial={{ opacity: 0, x: -50 }} 
@@ -89,12 +89,12 @@ export default function FeaturePage() {
           initial={{ opacity: 0, x: 50 }} 
           animate={{ opacity: 1, x: 0 }} 
           transition={{ duration: 1 }} 
-          className="flex justify-center"
+          className="flex flex-col space-y-6 justify-center"
         >
           <img 
-            src="https://img.freepik.com/free-vector/new-functions-concept-illustration_114360-5986.jpg"
-            alt="Enterprise Solutions" 
-            className="rounded-xl shadow-2xl w-full sm:w-3/4 max-w-md hover:scale-105 transition-transform duration-300"
+            src="https://img.freepik.com/free-vector/new-functions-concept-illustration_114360-5986.jpg" 
+            alt="Cloud Solutions" 
+            className="rounded-xl shadow-2xl w-full max-w-md hover:scale-105 transition-transform duration-300 md:ml-20"
           />
         </motion.div>
       </motion.section>

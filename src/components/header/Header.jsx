@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +14,9 @@ function Header() {
 
   const [selectedDashboardOption, setSelectedDashboardOption] = useState('Dashboard');
   const [selectedContactOption, setSelectedContactOption] = useState('Contact');
+
+  const dropdown1Ref = useRef(null);
+  const dropdown2Ref = useRef(null);
 
   const handleDashboardOptionClick = (option) => {
     setSelectedDashboardOption(option);
@@ -63,10 +66,6 @@ function Header() {
     setIsDropdown1Open(true);
   };
 
-  const handleDropdown1MouseLeave = () => {
-    if (!isDropdown1Clicked) setIsDropdown1Open(false);
-  };
-
   const handleDropdown2Click = () => {
     setIsDropdown2Open(!isDropdown2Open);
     setIsDropdown2Clicked(!isDropdown2Open);
@@ -76,20 +75,35 @@ function Header() {
     setIsDropdown2Open(true);
   };
 
-  const handleDropdown2MouseLeave = () => {
-    if (!isDropdown2Clicked) setIsDropdown2Open(false);
-  };
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdown1Ref.current && !dropdown1Ref.current.contains(event.target)) {
+        setIsDropdown1Open(false);
+        setIsDropdown1Clicked(false);
+      }
+      if (dropdown2Ref.current && !dropdown2Ref.current.contains(event.target)) {
+        setIsDropdown2Open(false);
+        setIsDropdown2Clicked(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
-    <nav className="bg-white h-16 px-4 sm:px-8 py-4 max-w-screen-2xl flex justify-between items-center">
+    <nav className="bg-white h-16 px-4 sm:px-8 py-4 max-w-screen-2xl flex justify-between items-center shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]">
       {/* Logo Section */}
       <div className="flex items-center cursor-pointer" onClick={handleLogoClick}>
         <img
-          src="https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/uploadedManual-66e8077d6d910_whatsapp_image_2024-09-16_at_3.50.26_pm.jpeg?d=200x200"
+          src="https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/uploadedManual-66e8077d6d910_whatsapp_image_2024-09-16_at_3.50.26_pm.jpeg?d=400x400"
           alt="Einfratech"
-          className="h-8"
+          className="h-16"
         />
-        <h2 className="font-bold text-[#223d57] px-3 sm:px-6 text-lg">Enfratech System</h2>
+        <h2 className="font-bold text-[#223d57] px-3 sm:px-6 text-lg">Einfratech System</h2>
       </div>
 
       {/* Hamburger Menu for Mobile */}
@@ -103,13 +117,9 @@ function Header() {
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-4">
         {/* Dashboard Dropdown */}
-        <div
-          className="relative"
-          onMouseEnter={handleDropdown1MouseEnter}
-          onMouseLeave={handleDropdown1MouseLeave}
-        >
+        <div className="relative" onMouseEnter={handleDropdown1MouseEnter} ref={dropdown1Ref}>
           <button
-            className="text-[#0D6EFD] flex p-1.5 bg-white rounded-md items-center hover:bg-gray-100"
+            className="text-black flex p-1.5 items-center hover:text-gray-600"
             onClick={handleDropdown1Click}
           >
             <h1 className="px-2 text-sm">{selectedDashboardOption}</h1>
@@ -136,32 +146,28 @@ function Header() {
 
         {/* Static Links */}
         <div
-          className="px-3 text-sm hover:text-[#0D6EFD] cursor-pointer"
+          className="px-3 text-sm text-black hover:text-gray-600 cursor-pointer"
           onClick={() => handleStaticLinkClick('/customer')}
         >
           Customers
         </div>
         <div
-          className="px-3 text-sm hover:text-[#0D6EFD] cursor-pointer"
+          className="px-3 text-sm text-black hover:text-gray-600 cursor-pointer"
           onClick={() => handleStaticLinkClick('/services')}
         >
           Services
         </div>
         <div
-          className="px-3 text-sm hover:text-[#0D6EFD] cursor-pointer"
+          className="px-3 text-sm text-black hover:text-gray-600 cursor-pointer"
           onClick={() => handleStaticLinkClick('/features')}
         >
           Features
         </div>
 
         {/* Contact Dropdown */}
-        <div
-          className="relative"
-          onMouseEnter={handleDropdown2MouseEnter}
-          onMouseLeave={handleDropdown2MouseLeave}
-        >
+        <div className="relative" onMouseEnter={handleDropdown2MouseEnter} ref={dropdown2Ref}>
           <button
-            className="text-[#0D6EFD] flex p-1.5 bg-white rounded-md items-center hover:bg-gray-100"
+            className="text-black flex p-1.5 items-center hover:text-gray-600"
             onClick={handleDropdown2Click}
           >
             <h1 className="px-2 text-sm">{selectedContactOption}</h1>
@@ -184,7 +190,7 @@ function Header() {
           )}
         </div>
 
-        {/* Sign In Button (Original Styling) */}
+        {/* Sign In Button */}
         <button
           className="p-1.5 px-4 bg-[#0D6EFD] text-white rounded-md hover:bg-[#0d5ddd] text-sm"
           onClick={handleSignInClick}
@@ -198,9 +204,9 @@ function Header() {
         <div className="absolute top-16 left-0 w-full bg-white md:hidden shadow-lg z-20">
           <div className="flex flex-col p-4 space-y-3">
             {/* Dashboard Dropdown */}
-            <div className="relative">
+            <div className="relative" ref={dropdown1Ref}>
               <button
-                className="text-[#0D6EFD] flex p-2 bg-white rounded-md w-full text-left hover:bg-gray-100"
+                className="text-black flex p-2 w-full text-left hover:text-gray-600"
                 onClick={() => setIsDropdown1Open(!isDropdown1Open)}
               >
                 <h1 className="text-sm flex-1">{selectedDashboardOption}</h1>
@@ -227,28 +233,28 @@ function Header() {
 
             {/* Static Links */}
             <div
-              className="p-2 text-sm text-[#000000] hover:text-[#0D6EFD] cursor-pointer w-full text-left"
+              className="p-2 text-sm text-black hover:text-gray-600 cursor-pointer w-full text-left"
               onClick={() => handleStaticLinkClick('/customer')}
             >
               Customers
             </div>
             <div
-              className="p-2 text-sm text-[#000000] hover:text-[#0D6EFD] cursor-pointer w-full text-left"
+              className="p-2 text-sm text-black hover:text-gray-600 cursor-pointer w-full text-left"
               onClick={() => handleStaticLinkClick('/services')}
             >
               Services
             </div>
             <div
-              className="p-2 text-sm text-[#000000] hover:text-[#0D6EFD] cursor-pointer w-full text-left"
+              className="p-2 text-sm text-black hover:text-gray-600 cursor-pointer w-full text-left"
               onClick={() => handleStaticLinkClick('/features')}
             >
               Features
             </div>
 
             {/* Contact Dropdown */}
-            <div className="relative">
+            <div className="relative" ref={dropdown2Ref}>
               <button
-                className="text-[#0D6EFD] flex p-2 bg-white rounded-md w-full text-left hover:bg-gray-100"
+                className="text-black flex p-2 w-full text-left hover:text-gray-600"
                 onClick={() => setIsDropdown2Open(!isDropdown2Open)}
               >
                 <h1 className="text-sm flex-1">{selectedContactOption}</h1>
@@ -271,7 +277,6 @@ function Header() {
               )}
             </div>
 
-            
             <button
               className="p-2 px-4 bg-[#0D6EFD] text-white rounded-md hover:bg-[#0d5ddd] text-sm w-full text-left"
               onClick={handleSignInClick}

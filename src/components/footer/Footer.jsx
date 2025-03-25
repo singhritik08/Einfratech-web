@@ -19,10 +19,10 @@ export default function Footer() {
   const [linksOpen, setLinksOpen] = useState(false);
 
   return (
-    <footer className="bg-[#0F172B] text-white py-8 px-6 md:px-16">
+    <footer className="bg-[#000000] text-white py-8 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
         <div>
-          <h2 className="text-lg font-semibold">Einfratech</h2>
+          <h2 className=" text-white text-lg font-semibold">Einfratech</h2>
           <p className="text-gray-400 mt-2 text-sm">
             Empowering innovation with cutting-edge technology.
           </p>

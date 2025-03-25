@@ -69,14 +69,14 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="font-sans overflow-x-hidden">
+    <div className="font-sans overflow-x-hidden overflow-y-hidden">
       {/* Header Section */}
       <motion.section
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
         variants={fadeInUp}
-        className="bg-white text-center py-8 md:py-16 flex flex-col md:flex-row justify-between items-center px-4 sm:px-8 md:px-[18vw] overflow-hidden"
+        className="bg-grey-300 text-center py-8 md:py-16 flex flex-col md:flex-row justify-between items-center px-4 sm:px-8 md:px-[18vw] overflow-hidden"
       >
         <div className="mb-6 md:mb-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
