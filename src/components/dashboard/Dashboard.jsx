@@ -236,7 +236,7 @@ const Dashboard = () => {
 
           <div
             ref={imageScrollRef}
-            className="w-full flex gap-4 md:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide py-4"
+            className="w-full flex gap-4 md:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar py-4"
           >
             {images.map((src, index) => (
               <div
@@ -282,7 +282,10 @@ const Dashboard = () => {
             >
               <FaArrowLeft size={16} />
             </button>
-            <div ref={scrollRef} className="w-full sm:w-[80%] flex gap-4 md:gap-6 overflow-x-scroll scrollbar-hide scroll-smooth">
+            <div
+              ref={scrollRef}
+              className="w-full sm:w-[80%] flex gap-4 md:gap-6 overflow-x-scroll scroll-smooth hide-scrollbar"
+            >
               {Quotes.map((quote, index) => (
                 <div
                   key={index}
