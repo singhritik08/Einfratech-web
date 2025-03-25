@@ -192,7 +192,7 @@ function Header() {
 
         {/* Sign In Button */}
         <button
-          className="p-1.5 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
+          className="p-1.5 px-4 bg-[#0D6EFD] text-white rounded-md hover:bg-blue-700 text-sm"
           onClick={handleSignInClick}
         >
           Sign In

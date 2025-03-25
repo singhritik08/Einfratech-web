@@ -96,7 +96,7 @@ const Dashboard = () => {
               Schedule Demo
             </Link>
             <button
-              className="bg-blue-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-md hover:bg-blue-700 transition text-xs md:text-base font-semibold shadow-sm"
+              className="bg-[#0D6EFD] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-md hover:bg-blue-700 transition text-xs md:text-base font-semibold shadow-sm"
             >
               Webmail
             </button>

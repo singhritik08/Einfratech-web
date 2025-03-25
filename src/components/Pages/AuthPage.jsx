@@ -34,14 +34,14 @@ export default function AuthPage() {
           {!isSignUp && (
             <a
               href="#"
-              className="text-blue-500 text-sm sm:text-sm float-right hover:underline transition duration-200 font-medium"
+              className="bg-[#0D6EFD] text-sm sm:text-sm float-right hover:underline transition duration-200 font-medium"
             >
               Forgot Password?
             </a>
           )}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 sm:py-3 rounded-xl hover:bg-blue-700 transition-all duration-300 text-base sm:text-base font-semibold shadow-lg hover:shadow-xl"
+            className="w-full bg-[#0D6EFD] text-white py-3 sm:py-3 rounded-xl hover:bg-blue-700 transition-all duration-300 text-base sm:text-base font-semibold shadow-lg hover:shadow-xl"
           >
             {isSignUp ? "Sign Up" : "Login"}
           </button>
@@ -63,7 +63,7 @@ export default function AuthPage() {
           <div className="w-10 sm:w-12 h-px bg-gray-300"></div>
         </div>
         <div className="space-y-3 sm:space-y-3 mt-2 md:mt-4 sm:mt-6">
-          <button className="w-full flex items-center justify-center bg-blue-600  text-white py-3 sm:py-3 rounded-xl hover:bg-blue-700 transition-all duration-300 text-base sm:text-base font-semibold shadow-md hover:shadow-lg">
+          <button className="w-full flex items-center justify-center bg-[#0D6EFD]  text-white py-3 sm:py-3 rounded-xl hover:bg-blue-700 transition-all duration-300 text-base sm:text-base font-semibold shadow-md hover:shadow-lg">
             <FaFacebook className="mr-2 sm:mr-2 text-xl sm:text-xl" /> Login with
             Facebook
           </button>
