@@ -319,7 +319,7 @@ const Dashboard = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
         variants={fadeInUp}
-        className="bg-blue-900 text-white pt-16 pb-20 overflow-hidden"
+        className="bg-blue-600 text-white pt-16 pb-20 overflow-hidden"
       >
         <h2 className="text-2xl md:text-3xl font-bold text-center">What Our Customers Are Saying</h2>
         <p className="text-center text-gray-300 mt-2 text-sm md:text-base">
